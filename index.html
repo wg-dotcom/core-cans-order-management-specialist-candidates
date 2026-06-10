@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Management Specialist Candidates — Core Cans</title>
+  <link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/63fcc1317b907e802e015d0b/68d2f3ca48bff2ac817a558e_OpenGraphImage-CoreCansWebsite.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open%20Sans:wght@300;400;500;600;700;800&family=Open%20Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2E86AB;
+      --primary-dark: #277291;
+      --primary-deeper: #205e78;
+      --primary-soft: #2E86AB26;
+      --primary-light: #2E86AB14;
+      --accent-light: #6daac4;
+      --dark: #FFFFFF;
+      --highlight: #2E86AB;
+      --bg-light: #f8f9fb;
+      --bg-subtle: rgba(0,0,0,0.04);
+      --bg-page: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #fafafa;
+      --white: #FFFFFF;
+      --text-primary: #FFFFFF;
+      --text-mid: rgba(0,0,0,0.6);
+      --text-light: rgba(0,0,0,0.45);
+      --text-muted: rgba(0,0,0,0.35);
+      --on-dark: #111111;
+      --on-dark-mid: rgba(0,0,0,0.65);
+      --on-dark-light: rgba(0,0,0,0.45);
+      --on-dark-muted: rgba(0,0,0,0.1);
+      --border: rgba(0,0,0,0.08);
+      --border-strong: rgba(0,0,0,0.12);
+      --tag-bg: #eaf3f7;
+      --tag-color: #29799a;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-md: 0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.06);
+      --shadow-lg: 0 1px 3px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.08);
+      --radius: 16px;
+      --font-heading: 'Open Sans', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --font-meta: 'Poppins', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); font-size: 16px; color: var(--text-primary); background: var(--bg-page); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* ── Scroll animations ── */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Hero ── */
+    .hero-top-bar { background: linear-gradient(90deg, var(--primary), var(--accent-light)); height: 4px; width: 100%; }
+    .hero { background: linear-gradient(155deg, var(--dark) 0%, var(--primary-deeper) 50%, var(--primary-dark) 100%); color: var(--white); padding: 72px 60px 64px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -40%; right: -15%; width: 700px; height: 700px; background: radial-gradient(circle, #2E86AB12 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, #2E86AB0d 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+    .hero-brand { display: flex; align-items: center; gap: 16px; margin-bottom: 48px; }
+    .hero-brand .logo-img { height: 32px; width: auto; filter: brightness(0) invert(1); }
+    .hero-brand .logo-sep { width: 1px; height: 24px; background: rgba(255,255,255,0.25); }
+    .hero-brand .logo-sub { font-family: var(--font-meta); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .hero-eyebrow { display: inline-block; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 100px; padding: 6px 18px; font-family: var(--font-meta); font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px; color: var(--highlight); }
+    .hero h1 { font-family: var(--font-heading); font-size: 50px; font-weight: 400; line-height: 1.15; max-width: 720px; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .hero h1 strong { font-weight: 700; }
+    .hero-sub { font-size: 17px; color: rgba(255,255,255,0.55); max-width: 660px; font-weight: 400; line-height: 1.7; margin-bottom: 44px; }
+    .hero-meta { display: flex; gap: 40px; flex-wrap: wrap; }
+    .hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .hero-meta-label { font-family: var(--font-meta); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #2E86ABe6; }
+    .hero-meta-value { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); }
+
+    /* ── Editorial / Intro ── */
+    .editorial { max-width: 780px; margin: 0 auto; padding: 80px 40px; }
+    .editorial-label { font-family: var(--font-meta); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); margin-bottom: 20px; }
+    .editorial-text { font-size: 17px; line-height: 1.85; color: var(--text-mid); }
+    .editorial-text p { margin-bottom: 16px; }
+    .editorial-text p:last-child { margin-bottom: 0; }
+    .editorial-divider { width: 48px; height: 3px; background: var(--primary); border-radius: 2px; margin-top: 32px; }
+
+    /* ── Candidates section ── */
+    .candidates-section { background: var(--bg-light); padding: 80px 0; }
+    .candidates-header { text-align: center; padding: 0 24px 48px; }
+    .candidates-header h2 { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+    .candidates-header p { font-family: var(--font-meta); font-size: 14px; color: var(--text-light); }
+
+    .batch-switcher { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 0 auto 40px; max-width: 800px; padding: 0 24px; }
+    .batch-switcher[data-count="1"] { display: none; }
+    .batch-btn { display: flex; align-items: center; gap: 8px; padding: 11px 22px; border: 2px solid var(--border); border-radius: 10px; background: var(--bg-card); font-family: var(--font-meta); font-size: 13px; font-weight: 600; color: var(--text-light); cursor: pointer; transition: all 0.2s ease; }
+    .batch-btn:hover { border-color: var(--primary); color: var(--text-primary); }
+    .batch-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .batch-count { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--primary); color: white; font-size: 11px; font-weight: 700; }
+    .batch-btn.active .batch-count { background: var(--highlight); color: var(--dark); }
+    .batch-panel.hidden { display: none; }
+
+    .candidates { max-width: 900px; margin: 0 auto; padding: 0 24px 40px; display: flex; flex-direction: column; gap: 24px; }
+
+    /* ── Card design ── */
+    .candidate-card { max-width: 1100px; margin: 0 auto 40px; padding: 0 40px; }
+    .card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: none; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.1); }
+    .card.featured { box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.06), 0 0 0 1px #2E86AB33; }
+    .card-top { background: var(--dark); padding: 36px 44px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .card-identity { display: flex; align-items: center; gap: 20px; }
+    .card-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--primary); border: none; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: white; flex-shrink: 0; font-family: var(--font-heading); }
+    .card-avatar.featured-avatar { background: var(--highlight); color: var(--dark); }
+    .card-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: white; margin-bottom: 4px; }
+    .card-location { font-size: 14px; color: var(--on-dark-mid); display: flex; align-items: center; gap: 6px; }
+    .card-badges { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+    .badge { font-family: var(--font-meta); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
+    .badge-shortlisted { background: #2E86AB33; color: var(--primary); border: 1px solid #2E86AB66; }
+    .card-rate { text-align: right; }
+    .card-rate-amount { font-size: 24px; font-weight: 700; color: var(--primary); font-family: var(--font-heading); }
+    .card-rate-period { font-family: var(--font-meta); font-size: 10px; color: var(--on-dark-mid); text-transform: uppercase; letter-spacing: 1px; }
+    .tap-badge { display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 4px 10px; border-radius: 6px; font-family: var(--font-meta); font-size: 11px; font-weight: 700; letter-spacing: 0.04em; }
+
+    .tags-row { padding: 0 44px 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { display: inline-block; padding: 5px 14px; border-radius: 100px; font-family: var(--font-meta); font-size: 11px; font-weight: 600; }
+    .tag-filled { background: var(--tag-bg); color: var(--tag-color); }
+    .tag-filled:nth-child(3) { background: var(--highlight); color: var(--dark); }
+    .tag-outlined { background: var(--bg-subtle); color: var(--text-mid); border: 1.5px solid var(--border-strong); }
+
+    .card-body { padding: 40px 44px; color: var(--text-mid); }
+    .card-section { margin-bottom: 0; }
+    .card-section-title { font-family: var(--font-meta); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 16px; margin-top: 32px; }
+    .card-section-title:first-of-type { margin-top: 0; }
+    .card-narrative { font-size: 16px; line-height: 1.85; color: var(--text-mid); margin-bottom: 32px; font-style: italic; border-left: 3px solid var(--primary); padding-left: 20px; }
+    .card-narrative strong { color: var(--text-primary); font-weight: 600; font-style: normal; }
+    .experience-list { display: flex; flex-direction: column; gap: 20px; }
+    .exp-item { display: flex; gap: 16px; align-items: flex-start; }
+    .exp-dot-col { display: flex; flex-direction: column; align-items: center; padding-top: 6px; }
+    .exp-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+    .exp-line { width: 1px; flex: 1; background: #2E86AB33; margin-top: 6px; min-height: 30px; }
+    .exp-content { flex: 1; padding-bottom: 4px; }
+    .exp-role { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+    .exp-company { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+    .exp-highlight { font-size: 13px; color: var(--primary); margin-top: 4px; }
+    .tags-cluster { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ctag { font-family: var(--font-meta); font-size: 11px; padding: 6px 14px; border-radius: 6px; background: var(--bg-subtle); color: var(--text-mid); }
+    .ctag-key { background: #2E86AB1a; color: var(--primary); font-weight: 600; }
+    .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .fit-item { background: var(--bg-subtle); padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-strong); overflow: visible; word-wrap: break-word; }
+    .fit-label { font-size: 12px; color: var(--text-mid); line-height: 1.5; display: block; overflow: visible; white-space: normal; }
+    .strength-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-label { font-family: var(--font-meta); font-size: 12px; color: var(--text-mid); }
+    .bar-track { height: 5px; background: var(--bg-subtle); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary-dark), var(--primary)); border-radius: 3px; transition: width 1.5s ease; }
+    .card-actions { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
+    .video-intro-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; background: transparent; border: 1.5px solid var(--primary); border-radius: 6px; color: var(--primary); font-family: var(--font-meta); font-size: 13px; font-weight: 600; letter-spacing: 0.3px; text-decoration: none; transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease; }
+    .video-intro-btn:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
+
+    .experience-item { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .exp-dates { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+
+    .strength-list { padding-left: 18px; }
+    .strength-list li { font-size: 14px; color: var(--text-mid); margin-bottom: 8px; line-height: 1.6; }
+
+    .card-footer { display: flex; align-items: center; justify-content: space-between; padding: 16px 44px; background: var(--bg-subtle); border-top: 1px solid var(--border); }
+    .footer-note { font-size: 13px; color: var(--text-light); }
+    .footer-note strong { color: var(--text-primary); }
+    .btn-group { display: flex; gap: 8px; }
+    .btn-card { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 8px; font-family: var(--font-meta); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.15s; cursor: pointer; }
+    .btn-outline { background: var(--bg-card); color: var(--primary); border: 1.5px solid var(--primary); }
+    .btn-outline:hover { background: var(--tag-bg); }
+    .btn-primary-card { background: var(--primary); color: white; border: 1.5px solid var(--primary); }
+    .btn-primary-card:hover { background: var(--primary-dark); }
+    .btn-card svg { width: 15px; height: 15px; }
+    .btn-tap { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; }
+
+    .card-recruiter-note { margin: 0; padding: 20px 24px; background: linear-gradient(135deg, #2E86AB0d, #2E86AB05); border-left: 3px solid var(--primary); border-radius: 0 10px 10px 0; }
+    .card-recruiter-note .recruiter-note-title { font-family: var(--font-meta); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); margin-bottom: 8px; }
+    .card-recruiter-note p { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+
+    /* ── Comparison table ── */
+    .comparison-section { max-width: 1100px; margin: 20px auto 40px; padding: 0 40px; }
+    .comparison-table-wrap { overflow-x: auto; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+    .comparison-table { width: 100%; border-collapse: collapse; background: var(--bg-card); font-size: 13px; color: var(--text-mid); border-radius: 12px; overflow: hidden; }
+    .comparison-table thead th { background: var(--dark); color: var(--primary); padding: 14px 16px; text-align: left; font-family: var(--font-meta); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+    .comparison-table thead th:first-child { border-radius: 14px 0 0 0; }
+    .comparison-table thead th:last-child { border-radius: 0 14px 0 0; }
+    .comparison-table tbody td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    .comparison-table tbody tr:last-child td { border-bottom: none; }
+    .comparison-table tbody tr:hover { background: var(--bg-card-hover); }
+    .comparison-table .highlight-cell { background: #2E86AB1a; font-weight: 600; color: var(--primary); }
+
+    /* ── Advisor ── */
+    .advisor-section { max-width: 780px; margin: 0 auto; padding: 80px 40px 40px; }
+    .advisor-section-label { font-family: var(--font-meta); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); margin-bottom: 20px; text-align: center; }
+    .advisor-card { display: flex; gap: 28px; background: var(--bg-card); border-radius: 16px; padding: 36px; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+    .advisor-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); flex-shrink: 0; }
+    .advisor-info { flex: 1; }
+    .advisor-label { font-family: var(--font-meta); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); margin-bottom: 4px; }
+    .advisor-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--text-primary); }
+    .advisor-role { font-family: var(--font-meta); font-size: 13px; color: var(--text-light); margin-bottom: 12px; }
+    .advisor-summary { font-size: 14px; color: var(--text-mid); line-height: 1.75; }
+
+    /* ── Sagan info block ── */
+    .sagan-info { max-width: 780px; margin: 0 auto; padding: 0 40px 60px; }
+    .sagan-info-inner { display: flex; gap: 32px; justify-content: center; padding: 32px 0; border-top: 1px solid var(--border); }
+    .sagan-stat { text-align: center; }
+    .sagan-stat-number { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); }
+    .sagan-stat-label { font-family: var(--font-meta); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); margin-top: 4px; }
+
+    /* ── Footer CTA ── */
+    .footer-cta { background: var(--dark); padding: 72px 40px; text-align: center; }
+    .footer-cta h2 { font-family: var(--font-heading); font-size: 32px; font-weight: 400; color: white; margin-bottom: 12px; }
+    .footer-cta h2 strong { font-weight: 700; }
+    .footer-cta p { font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .footer-contact { display: inline-block; padding: 14px 36px; background: var(--primary); color: white; border-radius: 8px; font-family: var(--font-meta); font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: 0.3px; transition: background 0.2s ease, transform 0.15s ease; }
+    .footer-contact:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+    /* ── Footer ── */
+    .site-footer { text-align: center; padding: 32px; color: rgba(255,255,255,0.4); font-family: var(--font-meta); font-size: 12px; background: var(--dark); border-top: 1px solid rgba(255,255,255,0.08); }
+    .footer-logos { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 12px; }
+    .footer-logos img { height: 22px; opacity: 0.5; }
+    .footer-x { font-size: 16px; color: rgba(255,255,255,0.2); }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 48px 24px 48px; }
+      .hero h1 { font-size: 32px; }
+      .hero-meta { gap: 24px; }
+      .card-top { flex-direction: column; padding: 24px; gap: 16px; }
+      .card-body { padding: 24px; }
+      .candidate-card { padding: 0 16px; }
+      .editorial { padding: 48px 24px; }
+      .fit-grid { grid-template-columns: 1fr; }
+      .strength-bars { grid-template-columns: 1fr; }
+      .advisor-card { flex-direction: column; text-align: center; }
+      .comparison-table { font-size: 11px; }
+      .sagan-info-inner { flex-direction: column; gap: 20px; }
+      .footer-cta { padding: 48px 24px; }
+      .footer-cta h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-top-bar"></div>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-brand">
+        <img class="logo-img" src="https://cdn.prod.website-files.com/63fcc1317b907e802e015d0b/68d2f3ca48bff2ac817a558e_OpenGraphImage-CoreCansWebsite.jpg" alt="Core Cans" />
+        <div class="logo-sep"></div>
+        <span class="logo-sub">Talent Selection</span>
+      </div>
+      <div class="hero-eyebrow">Sagan Talent Search</div>
+      <h1><strong>Order Management Specialist</strong> Candidates for Core Cans</h1>
+      <p class="hero-sub">Curated talent, vetted and matched to your specific needs. Each profile below has been carefully evaluated for role alignment, skills, and cultural fit.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Candidates</span>
+          <span class="hero-meta-value">4 profiles</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Batch</span>
+          <span class="hero-meta-value">1 &middot; June 10, 2026</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Advisor</span>
+          <span class="hero-meta-value">Amimo Chaka</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="editorial fade-in">
+    <div class="editorial-label">Our Selection Rationale</div>
+    <div class="editorial-text">
+      <p>Hello Kirk,</p><p></p><p>Here is a great batch of candidates for your Order Management Specialist role.</p><p></p><p>We hand-selected Ongeziwe, Cris, Luis, and Judy because they all possess a zero-tolerance approach to errors and have years of experience navigating complex ERP and banking workflows under tight deadlines.</p><p></p><p>Whether it is Cris and Judy's deep expertise processing customized product configurations without missing small details, or Luis and Ongeziwe's mastery in catching missing data patterns before they hit production, these professionals are built for high-accountability environments.</p><p></p><p>Take a look at their profiles below, and let me know who you would like to move forward with for a chat next week.</p>
+    </div>
+    <div class="editorial-divider"></div>
+  </section>
+
+  <section class="candidates-section">
+    <div class="candidates-header fade-in">
+      <h2>Candidate Profiles</h2>
+      <p>Each candidate has been carefully selected and evaluated for this role.</p>
+    </div>
+
+    <div class="batch-switcher" id="batch-switcher" data-count="1">
+      <button class="batch-btn active" onclick="showBatch(1)" data-batch="1">
+        <span>Batch 1</span>
+        <span class="batch-count">4</span>
+      </button>
+    </div>
+
+    <div id="batch-1" class="batch-panel">
+      <div class="candidates">
+        
+    <div class="candidate-card">
+      <div class="card featured" id="candidate-0">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar featured-avatar">OG</div>
+            <div>
+              <div class="card-name">Ongeziwe G.</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                South Africa &middot; 7+ yrs Operations
+              </div>
+              <div class="card-badges">
+                
+                <span class="badge badge-shortlisted">Pre-Shortlisted</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$2,400/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          
+          <div class="card-narrative">
+            Ongeziwe is the polished performer in this batch. Seven years at a major South African insurer means she understands compliance, accuracy, and the weight of getting data right. The kind of hire who brings systems thinking to your dunnage process.
+          </div>
+
+          
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Senior Service Consultant &amp; 2IC</div>
+                <div class="exp-company">Old Mutual Insure – Short-Term Insurance &middot; 2022 – 2024</div>
+                <div class="exp-highlight">Managing high-volume client emails, correspondence and professional communications</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Workforce Management Junior Analyst</div>
+                <div class="exp-company">Old Mutual Insure – Short-Term Insurance &middot; 2019 – 2022</div>
+                <div class="exp-highlight">Capturing, filtering and accurately entering large volumes of workforce and operational data into enterprise systems — directly supporting business operations and decision-making</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Team Leader (Learnership Promotion)</div>
+                <div class="exp-company">Old Mutual Insure – Short-Term Insurance &middot; 2018 – 2019</div>
+                <div class="exp-highlight">Promoted to Team Leader within 6 months of joining — managing a group of 15 learnership students</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Customer Service Consultant</div>
+                <div class="exp-company">Harambee Youth Employment &middot; January 2017 – January 2018</div>
+                <div class="exp-highlight">Performed accurate data capturing ensuring integrity and reliability of all customer records</div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Salesforce CRM</span><span class="ctag ctag-key">Data Entry</span><span class="ctag ctag-key">Workforce Management</span><span class="ctag ctag-key">Process Documentation</span><span class="ctag ctag-key">Quality Control</span>
+            <span class="ctag">System Optimization</span>
+          </div>
+
+          
+          <div class="card-section-title">Core Cans Fit Indicators</div>
+          <div class="fit-grid">
+            
+            <div class="fit-item">
+              <div class="fit-label">Built scheduling systems for 100+ staff → Core Cans needs SOP creation for lean 4-person team operations</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">98% QA score in high-volume data entry → Zero tolerance for shipping errors in custom can orders</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">Created system workarounds that reduced errors → Core Cans lacks formal workflows and needs process optimization</div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            
+            <div class="bar-item">
+              <div class="bar-label">Data Accuracy</div>
+              <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Process Building</div>
+              <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">System Navigation</div>
+              <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Independent Work</div>
+              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Order Management</div>
+              <div class="bar-track"><div class="bar-fill" style="width:82%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Documentation</div>
+              <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://candidate-video.com/uploads/d95f2cc4-026e-4d00-a204-82731b4dfd6c" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            
+            
+          </div>
+        </div>
+
+        
+        <div class="card-footer">
+          <div class="card-recruiter-note">
+            <div class="recruiter-note-title">Recruiter Note</div>
+            <p>Ongeziwe stands out for her combination of enterprise-grade accuracy and process-building DNA. Her role managing workforce data for 100+ staff at Old Mutual directly translates to Core Cans' need for someone who can build SOPs from scratch. The 98% QA score isn't just a number—it's proof she can maintain precision under volume. Her Salesforce fluency and system workaround experience show she's comfortable with the tech stack Core Cans uses. The insurance background means she's dealt with compliance pressure similar to what a lean distributor faces. More mature than the other candidates, with the operational discipline Kirk and Christian need.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="candidate-card">
+      <div class="card" id="candidate-1">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">CL</div>
+            <div>
+              <div class="card-name">Cris L.</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Philippines &middot; 13+ yrs Order Management
+              </div>
+              <div class="card-badges">
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$2,400/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          
+          <div class="card-narrative">
+            Cris is the heavyweight operator in this batch. Thirteen years of hands-on order management means she's seen every configuration error that can happen. At Sunday Golf, she was the quality gate between sales and production. The kind of hire who catches the missing color spec before it becomes a production nightmare.
+          </div>
+
+          
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Wholesale Account Coordinator / Data &amp; Order Entry Specialist</div>
+                <div class="exp-company">Sunday Golf &middot; Nov 2022 – Oct 2025</div>
+                <div class="exp-highlight">• Accurately entered and reviewed customized wholesale product orders into Fulfil ERP and Globe Trader, ensuring all order details — product configurations, colors, and specifications — were complete and production-ready.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Virtual Assistant &amp; QA Specialist</div>
+                <div class="exp-company">Preferred Pharmacy &middot; Sep 2015 – Oct 2022</div>
+                <div class="exp-highlight">• Compiled and submitted QA evaluation reports, identifying process inefficiencies and recommending improvements that optimized daily operations — directly aligning with quality control and process adherence requirements.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Appointment Setter</div>
+                <div class="exp-company">Upwork (Remote) &middot; Apr 2013 – Sep 2015</div>
+                <div class="exp-highlight">• Maintained accurate records and database integrity across high-volume outbound operations (60+ calls/day), supporting operational efficiency and data consistency.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Appointment Setter &amp; Loan Officer</div>
+                <div class="exp-company">Direct Solutions &middot; Mar 2012 – Mar 2013</div>
+                <div class="exp-highlight">• Accurately documented 80+ daily outbound activities and maintained database integrity within enterprise CRM systems, ensuring seamless information flow across the organization.</div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Fulfil ERP</span><span class="ctag ctag-key">Globe Trader</span><span class="ctag ctag-key">Order Review &amp; Audit</span><span class="ctag ctag-key">Customized Product Processing</span><span class="ctag ctag-key">Supplier Coordination</span>
+            <span class="ctag">High-Volume Data Entry</span>
+          </div>
+
+          
+          <div class="card-section-title">Core Cans Fit Indicators</div>
+          <div class="fit-grid">
+            
+            <div class="fit-item">
+              <div class="fit-label">Customized wholesale product orders at Sunday Golf → Core Cans sells custom printed aluminum cans requiring exact specifications</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">Coordinated with suppliers to resolve incomplete order information → Core Cans needs someone to build SOPs for their dunnage process and supplier coordination</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">100+ order lines daily with zero-error targets → Core Cans founders need to free up from day-to-day transaction processing</div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            
+            <div class="bar-item">
+              <div class="bar-label">ERP Systems</div>
+              <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Order Processing</div>
+              <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Quality Control</div>
+              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Supplier Coordination</div>
+              <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Process Documentation</div>
+              <div class="bar-track"><div class="bar-fill" style="width:75%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Independent Work</div>
+              <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://candidate-video.com/uploads/5c88b395-bca4-4e97-a790-89b84212c549" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            
+            
+          </div>
+        </div>
+
+        
+        <div class="card-footer">
+          <div class="card-recruiter-note">
+            <div class="recruiter-note-title">Recruiter Note</div>
+            <p>Cris brings the deepest order management experience in this group. Her 3-year run at Sunday Golf is exactly what Core Cans needs: customized wholesale orders, ERP systems, and the discipline to catch incomplete data before it hits production. She's processed everything from product configurations to shipping calculations with zero-error expectations. The trade-off is she's more specialized than some others in the batch, but for Core Cans' immediate pain point around order accuracy and shipment processing, that specialization is exactly what they need. She understands the wholesale mindset and the cost of getting custom orders wrong.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="candidate-card">
+      <div class="card" id="candidate-2">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">LC</div>
+            <div>
+              <div class="card-name">Luis C.</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Nicaragua &middot; 5 yrs Operations
+              </div>
+              <div class="card-badges">
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$2,400/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          
+          <div class="card-narrative">
+            Luis is the builder DNA pick in this batch. He doesn't just follow processes, he creates them. At Concentrix he built the SharePoint knowledge base from the ground up. The kind of hire who will document your dunnage process while he learns it.
+          </div>
+
+          
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Team Leader / Supervisor</div>
+                <div class="exp-company">Concentrix · Billing, Account &amp; Technical Support &middot; Oct 2022 – Apr 2026</div>
+                <div class="exp-highlight">Managed timekeeping and attendance records for a full team — ensuring accuracy for payroll and HR compliance processing.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Subject Matter Expert (SME)</div>
+                <div class="exp-company">Concentrix &middot; Jul 2021 – Oct 2022</div>
+                <div class="exp-highlight">Served as the primary accuracy and completeness resource for multi-agent teams — reviewed and resolved escalated inquiries, ensuring information was correct and complete before final resolution.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Customer &amp; Technical Support Advocate</div>
+                <div class="exp-company">Concentrix &middot; Aug 2020 – Jul 2021</div>
+                <div class="exp-highlight">Handled high-volume queues for billing, account management, and technical support — accurately processing and documenting a wide range of customer scenarios.</div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Microsoft Dynamics</span><span class="ctag ctag-key">Excel</span><span class="ctag ctag-key">Power BI</span><span class="ctag ctag-key">SharePoint</span><span class="ctag ctag-key">SOP Creation</span>
+            <span class="ctag">Process Documentation</span>
+          </div>
+
+          
+          <div class="card-section-title">Core Cans Fit Indicators</div>
+          <div class="fit-grid">
+            
+            <div class="fit-item">
+              <div class="fit-label">Built SharePoint knowledge base and SOPs for 30+ person teams → Core Cans needs formal workflow documentation built from scratch</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">Microsoft Dynamics daily record entry/review experience → Direct ERP background for order processing workflows</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">CST timezone (UTC-6) → Perfect overlap with US PST business hours for real-time coordination</div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            
+            <div class="bar-item">
+              <div class="bar-label">ERP Systems</div>
+              <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Process Documentation</div>
+              <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Data Accuracy</div>
+              <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Workflow Design</div>
+              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Cross-team Coordination</div>
+              <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Independent Work</div>
+              <div class="bar-track"><div class="bar-fill" style="width:87%"></div></div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://candidate-video.com/uploads/aea56e7e-7de9-4968-a618-26e6b49b1d2b" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            
+            
+          </div>
+        </div>
+
+        
+        <div class="card-footer">
+          <div class="card-recruiter-note">
+            <div class="recruiter-note-title">Recruiter Note</div>
+            <p>Luis brings the exact combination Core Cans needs: hands-on ERP experience plus natural systems thinking. His Microsoft Dynamics background translates directly to order management workflows. More importantly, he's the candidate who built SOPs at scale - reorganized SharePoint libraries, created tracking matrices, documented processes for 30+ person teams. Core Cans explicitly needs someone to build out their workflows and documentation. Luis has done this before. CST timezone means perfect overlap with US operations. The process-minded hire who can grow with the founders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="candidate-card">
+      <div class="card" id="candidate-3">
+        <div class="card-top">
+          <div class="card-identity">
+            <div class="card-avatar">JW</div>
+            <div>
+              <div class="card-name">Judy W.</div>
+              <div class="card-location">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Kenya &middot; 3+ yrs ERP Systems
+              </div>
+              <div class="card-badges">
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="card-rate">
+            <div class="card-rate-amount">$2,400/mo</div>
+            <div class="card-rate-period">USD / Month</div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          
+          <div class="card-narrative">
+            Judy is your cheat code in this batch. Banking background means she understands that one wrong digit breaks everything. At Equity Bank she's the quality gate for 300+ branches. The kind of hire who brings enterprise-grade accuracy to your can order workflows.
+          </div>
+
+          
+          <div class="card-section-title">Experience Highlights</div>
+          <div class="experience-list">
+            
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">IT ERP Analyst</div>
+                <div class="exp-company">Equity Bank Group Holdings &middot; Nov 2024 – Present</div>
+                <div class="exp-highlight">• Enter, review, and validate data across Oracle ERP and Oracle Sales &amp; Service Cloud systems serving 300+ branches, ensuring accuracy and completeness before processing.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                <div class="exp-line"></div>
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">ERP Support &amp; Backend Developer</div>
+                <div class="exp-company">E&amp;M Technology House Ltd &middot; Jan 2024 – Oct 2024</div>
+                <div class="exp-highlight">• Provided ERP and enterprise database support to multiple clients, managing order and data entry workflows remotely with high accuracy requirements.</div>
+              </div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot-col">
+                <div class="exp-dot"></div>
+                
+              </div>
+              <div class="exp-content">
+                <div class="exp-role">Relationship Officer – Operations &amp; Customer Support</div>
+                <div class="exp-company">Equity Bank Kenya &middot; Jul 2022 – Dec 2023</div>
+                <div class="exp-highlight">• Managed cash operations and international remittances achieving 100% transaction accuracy over 18 months with zero error incidents on record.</div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Platforms &amp; Tools</div>
+          <div class="tags-cluster">
+            <span class="ctag ctag-key">Oracle ERP</span><span class="ctag ctag-key">Microsoft Dynamics</span><span class="ctag ctag-key">Order Validation</span><span class="ctag ctag-key">Quality Control</span><span class="ctag ctag-key">Cross-Functional Coordination</span>
+            <span class="ctag">Process Documentation</span>
+          </div>
+
+          
+          <div class="card-section-title">Core Cans Fit Indicators</div>
+          <div class="fit-grid">
+            
+            <div class="fit-item">
+              <div class="fit-label">Oracle ERP + Microsoft Dynamics experience → Core Cans needs someone who can handle complex order management systems</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">100% transaction accuracy over 18 months → Custom can orders require zero tolerance for configuration errors</div>
+            </div>
+            <div class="fit-item">
+              <div class="fit-label">Built process documentation and SOPs at Equity Bank → Core Cans urgently needs someone to document their dunnage process</div>
+            </div>
+          </div>
+
+          
+          <div class="card-section-title">Strength Profile</div>
+          <div class="strength-bars">
+            
+            <div class="bar-item">
+              <div class="bar-label">Order Management</div>
+              <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Data Accuracy</div>
+              <div class="bar-track"><div class="bar-fill" style="width:98%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">ERP Systems</div>
+              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Process Documentation</div>
+              <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Quality Control</div>
+              <div class="bar-track"><div class="bar-fill" style="width:96%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label">Cross-team Coordination</div>
+              <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a class="video-intro-btn" href="https://candidate-video.com/uploads/ec7a550e-e465-4857-aa5e-5b8bdb6a8ee2" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
+            
+            
+          </div>
+        </div>
+
+        
+        <div class="card-footer">
+          <div class="card-recruiter-note">
+            <div class="recruiter-note-title">Recruiter Note</div>
+            <p>Judy stands out as the most process-disciplined candidate in this batch. Her banking background at Equity Bank Group means she's handled mission-critical order data where mistakes cost real money. Managing Oracle ERP across 300+ branches gives her the scale experience Core Cans needs as they grow. The NLP tool she built shows technical problem-solving beyond just data entry. Her 100% transaction accuracy over 18 months isn't just a number - it's proof she can handle the zero-tolerance environment Kirk and Christian need for their custom can orders. The Oracle certifications and ITIL background mean she thinks in terms of documented processes and compliance - exactly what they need for building SOPs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="fade-in">
+        
+  <div class="comparison-section">
+    <div class="section-label" style="padding-bottom:20px;">
+      <h2>Side-by-Side Comparison</h2>
+      <p>Key criteria at a glance to help you prioritize interviews.</p>
+    </div>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Ongeziwe G.</th><th>Cris L.</th><th>Luis C.</th><th>Judy W.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Location</strong></td><td>South Africa</td><td>Philippines</td><td>Nicaragua</td><td>Kenya</td></tr>
+          <tr><td><strong>Experience</strong></td><td>7+ yrs Operations</td><td>13+ yrs Order Management</td><td>5 yrs Operations</td><td>3+ yrs ERP Systems</td></tr>
+          <tr><td><strong>Key Employers</strong></td><td>Old Mutual Insure – Short-Term Insurance, Harambee Youth Employment</td><td>Sunday Golf, Preferred Pharmacy, Upwork (Remote)</td><td>Concentrix · Billing, Account &amp; Technical Support, Concentrix</td><td>Equity Bank Group Holdings, E&amp;M Technology House Ltd, Equity Bank Kenya</td></tr>
+          <tr><td><strong>Core Strength</strong></td><td>Salesforce CRM, Data Entry, Workforce Management</td><td>Fulfil ERP, Globe Trader, Order Review &amp; Audit</td><td>Microsoft Dynamics, Excel, Power BI</td><td>Oracle ERP, Microsoft Dynamics, Order Validation</td></tr>
+          <tr><td><strong>HRIS / Tools</strong></td><td>Salesforce CRM, Data Entry, Workforce Management, Process Documentation, Quality Control</td><td>Fulfil ERP, Globe Trader, Order Review &amp; Audit, Customized Product Processing, Supplier Coordination</td><td>Microsoft Dynamics, Excel, Power BI, SharePoint, SOP Creation</td><td>Oracle ERP, Microsoft Dynamics, Order Validation, Quality Control, Cross-Functional Coordination</td></tr>
+          <tr><td><strong>Languages</strong></td><td>English</td><td>English, Filipino</td><td>English, Spanish</td><td>English, Swahili</td></tr>
+          <tr><td><strong>Education</strong></td><td>Studied towards BA Media &amp; Anthropology (Wits University); Matriculation (Bizana High School)</td><td>Bachelor of Arts in Education (La Consolacion College, Bacolod City)</td><td>Bachelor's in Business Administration (Universidad Americana)</td><td>BSc. Environmental &amp; Biosystems Engineering (University of Nairobi)</td></tr>
+          <tr><td><strong>Rate</strong></td><td class="highlight-cell">$2,400/mo</td><td class="highlight-cell">$2,400/mo</td><td class="highlight-cell">$2,400/mo</td><td class="highlight-cell">$2,400/mo</td></tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="advisor-section fade-in">
+    <div class="advisor-section-label">Your Talent Advisor</div>
+    <div class="advisor-card">
+      <img class="advisor-avatar" src="https://saganrecruitment.com/wp-content/uploads/2025/10/Amimo.jpg" alt="Amimo Chaka" />
+      <div class="advisor-info">
+        <div class="advisor-label">Sagan Talent Advisor</div>
+        <div class="advisor-name">Amimo Chaka</div>
+        <div class="advisor-role">Sagan · Recruitment Team — Talent Advisor</div>
+        <p class="advisor-summary">Amimo helps high-growth companies find and hire exceptional remote talent across Africa, Asia, and Latin America. She is your direct point of contact for scheduling interviews and coordinating next steps.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sagan-info">
+    <div class="sagan-info-inner">
+      <div class="sagan-stat">
+        <div class="sagan-stat-number">20,000+</div>
+        <div class="sagan-stat-label">Applications / month</div>
+      </div>
+      <div class="sagan-stat">
+        <div class="sagan-stat-number">2,000+</div>
+        <div class="sagan-stat-label">Placements made</div>
+      </div>
+      <div class="sagan-stat">
+        <div class="sagan-stat-number">30+</div>
+        <div class="sagan-stat-label">Countries</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="footer-cta fade-in">
+    <h2>Ready to <strong>meet your next Order Management Specialist?</strong></h2>
+    <p>Tell us who you want to interview and we'll set it up within 24 hours.</p>
+    <a class="footer-contact" href="mailto:jesus.p@getsagan.com">Schedule Next Steps</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-logos">
+      <img src="https://cdn.prod.website-files.com/63fcc1317b907e802e015d0b/68d2f3ca48bff2ac817a558e_OpenGraphImage-CoreCansWebsite.jpg" alt="Core Cans" style="height:22px;" onerror="this.style.display='none'" />
+      <span class="footer-x">&times;</span>
+      <img src="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Logo-2-e1759568299542.png" alt="Sagan" />
+    </div>
+    <p>Prepared by <a href="https://getsagan.com" target="_blank">Sagan</a> for Core Cans &middot; Order Management Specialist Search &middot; June 10, 2026</p>
+  </footer>
+
+  <script>
+    function showBatch(n) {
+      document.querySelectorAll('.batch-panel').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('.batch-btn').forEach(b => b.classList.remove('active'));
+      var panel = document.getElementById('batch-' + n);
+      var btn = document.querySelector('[data-batch="' + n + '"]');
+      if (panel) panel.classList.remove('hidden');
+      if (btn) btn.classList.add('active');
+    }
+
+    /* Scroll animations */
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+      /* Animate candidate cards */
+      document.querySelectorAll('.candidate-card').forEach(function(el) {
+        el.classList.add('fade-in');
+        observer.observe(el);
+      });
+
+      /* Animate strength bars on scroll */
+      var barObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var fills = entry.target.querySelectorAll('.bar-fill');
+            fills.forEach(function(fill) {
+              var w = fill.style.width;
+              fill.style.width = '0%';
+              setTimeout(function() { fill.style.width = w; }, 100);
+            });
+            barObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.strength-bars').forEach(function(el) { barObserver.observe(el); });
+    })();
+  </script>
+</body>
+</html>
